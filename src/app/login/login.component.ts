@@ -15,8 +15,8 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   handleLogin() {
-    if(this.username === 'mattias' && this.password === 'dummy') {
-      this.router.navigate(['welcome'])
+    if(this.username.toLowerCase() === 'mattias' && this.password === 'dummy') {
+      this.router.navigate(['welcome', this.username])
       this.invalidLogin = false
       console.log(this.username)
     } else {
